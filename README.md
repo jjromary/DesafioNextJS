@@ -29,4 +29,3 @@ Frontend Challenge
 - [ ] Filtrar pelo nome do empreendimento.
 - [ ] Paginação.
 
-Encaminhar projeto concluido com assunto: "Challenge" para: hello@vix.dev
