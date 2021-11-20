@@ -1,5 +1,7 @@
 import Head from "next/head";
-import { Header } from "../components/Header";
+import React from "react";
+import { Buscar } from "../components/Buscar"; 
+import { Dashboard } from "../components/Dashboard";
  
 
 export default function Home() {
@@ -8,8 +10,9 @@ export default function Home() {
       <Head>
         <title>Vixi | Empreendimentos</title>
       </Head>
-      
       <main>
+        <Buscar />
+        <Dashboard />
       </main>
     </>
   )
