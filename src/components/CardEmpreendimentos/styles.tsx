@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 1140px;
-    height: 114px;
-    border-radius: 8px;
-    filter: drop-shadow(0px, 2px 4px rgba(48, 46, 69, 0.06));
-    background: var(--white);
+    margin-top: 85px;
+    
 `;
 
 export const Content = styled.div`
@@ -13,6 +10,12 @@ export const Content = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background: var(--white);
+    margin-top: 32px;
+    max-width: 1140px;
+    height: 114px;
+    border-radius: 8px;
+    filter: drop-shadow(0px, 2px 4px rgba(48, 46, 69, 0.06));
 
     .esquerda{
         display: flex;
@@ -38,14 +41,19 @@ export const Content = styled.div`
         }
 
         .enderecoEmpreendimento {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
             p{
                 font-family: Inter, sans-serif;
                 font-weight: normal;
                 font-size: 14px;
                 color: var(--textcolor-secondary);
 
-                margin-top: 16px
+                margin-top: 16px;
+                margin-bottom: 32px;
             }
+            
         }
     }
 

@@ -1,7 +1,8 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { Buscar } from "../components/Buscar"; 
 import { Dashboard } from "../components/Dashboard";
+
  
 
 export default function Home() {
