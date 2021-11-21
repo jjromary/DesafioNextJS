@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vixi | Empreendimentos</title>
+        <title>Vixi | Desafio</title>
       </Head>
       <main>
         <Buscar />

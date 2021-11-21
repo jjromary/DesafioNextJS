@@ -1,5 +1,6 @@
 import { Container} from "./styles"
 import Image from 'next/image'
+import Divisor from "../Divisor"
 
 
 export function Buscar() {
@@ -17,9 +18,7 @@ export function Buscar() {
                     />
                 </div>
 
-                <div className="divisor">
-                    <hr/>
-                </div>
+                <Divisor/>
             
         </Container>
     )

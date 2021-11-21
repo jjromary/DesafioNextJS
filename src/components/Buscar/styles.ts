@@ -19,14 +19,6 @@ export const Container = styled.div`
             font-style: normal;
         }
     }
-
-    .divisor {
-        hr {
-	        border: 0;
-	        border-top: 1px solid #BBB8D9;
-
-        }
-    }
 `;
 
 
