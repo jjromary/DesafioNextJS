@@ -13,19 +13,19 @@ Frontend Challenge
 
 
 ## Criar uma aplicação NextJS
-- [ ] Rodar na web
-- [ ] Utilizar Typescript
-- [ ] Listar Empreendimentos
+- [x] Rodar na web
+- [x] Utilizar Typescript
+- [x] Listar Empreendimentos
 - [ ] Criar Empreendimento
 - [ ] Editar Empreendimento
 - [ ] Deletar Empreendimento
-- [ ] Styled-components para construção do layout 
+- [x] Styled-components para construção do layout 
 - [ ] Responsivo
 - [ ] Subir no github, ou bitbucket e afins..
 
 ## Extras
 - [ ] Utilizar o getServerSideProps
-- [ ] utilizar o axios
+- [x] utilizar o axios
 - [ ] Filtrar pelo nome do empreendimento.
 - [ ] Paginação.
 
