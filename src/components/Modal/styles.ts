@@ -22,6 +22,7 @@ export const Content = styled.div`
    }
 
    .modalEditar {
+       
        .formEdicao {
            display: flex;
            flex-direction: column;
