@@ -1,11 +1,11 @@
 {
   "enterprises": [
     {
-      "_id": "PA01",
+      "id": "PA01",
       "name": "Sirius Vila Bastos",
       "status": "RELEASE",
       "purpose": "HOME",
-      "ri_number":  "123321",
+      "ri_number": "123321",
       "address": {
         "district": "Vila Bastos",
         "city": "Santo André",
@@ -16,11 +16,11 @@
       }
     },
     {
-      "_id": "PA02",
+      "id": "PA02",
       "name": "Moriah Ipiranga",
       "status": "RELEASE",
       "purpose": "HOME",
-      "ri_number":  "321123",
+      "ri_number": "321123",
       "address": {
         "street": "Rua Lucinda Ferreira",
         "number": "173",
@@ -31,11 +31,11 @@
       }
     },
     {
-      "_id": "PA03",
+      "id": "PA03",
       "name": "Sirius Campinas",
       "status": "RELEASE",
       "purpose": "HOME",
-      "ri_number":  "987654",
+      "ri_number": "987654",
       "address": {
         "street": "Av. Aquidabã",
         "number": "280",
@@ -44,6 +44,6 @@
         "state": "SP",
         "cep": "60000000"
       }
-    }
+    }    
   ]
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import Modal from "../components/Modal";
+import Modal from "../components/Form";
 
-export default function Editar(){
+export default function Cadastrar(){
     return(
         <Modal />
     )

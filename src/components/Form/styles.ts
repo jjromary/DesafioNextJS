@@ -44,7 +44,7 @@ export const Content = styled.div`
            .tipoImovel{
                margin-top: 56px;
            }
-           .cep{
+           .cepEmpreendimento{
                margin-top: 49px;
            }
            .endereco{
@@ -62,6 +62,7 @@ export const Content = styled.div`
             height: 36px;
             margin: 0 auto;
             margin-top: 38px;
+            border: 0px;
             border-radius: 71px;
             
             

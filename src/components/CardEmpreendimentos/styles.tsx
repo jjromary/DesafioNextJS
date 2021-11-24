@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
     margin-top: 85px;
     
-`;
 
-export const Content = styled.div`
+
+.card { 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,4 +85,5 @@ export const Content = styled.div`
             margin-right: 32px;
         }
     }
+}
 `;
