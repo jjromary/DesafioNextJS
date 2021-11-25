@@ -47,10 +47,12 @@ export const Content = styled.div`
            .cepEmpreendimento{
                margin-top: 49px;
            }
+
            .endereco{
-               margin-top: 42px;
-               width: 364px;
-               height: 72px;
+                width: 364px;
+                height: 72px;
+                margin-top: 16px;
+                border: 0;
            }
            .numero{
                margin-top: 44px;
