@@ -46,94 +46,19 @@
       }
     },
     {
-      "id": "IvmcJ2G",
-      "name": "a",
-      "status": "prontoMorar",
-      "purpose": "",
-      "ri_number": "",
-      "address": {
-        "district": "",
-        "city": "",
-        "street": "",
-        "state": "",
-        "number": 0,
-        "cep": ""
-      },
-      "number": "1325"
-    },
-    {
-      "id": "-Oy90nz",
-      "name": "teste 2",
+      "id": "klVatnV",
+      "name": "teste",
       "status": "lancamento",
-      "purpose": "empresarial",
-      "ri_number": "",
-      "address": {
-        "district": "",
-        "city": "",
-        "street": "",
-        "state": "",
-        "number": 0,
-        "cep": ""
-      },
-      "number": "1325"
-    },
-    {
-      "id": "uvt3fMO",
-      "name": "teste03",
-      "status": "lancamento",
-      "purpose": "",
-      "ri_number": "",
-      "address": {
-        "district": "",
-        "city": "",
-        "street": "",
-        "state": "",
-        "number": 0,
-        "cep": ""
-      },
-      "number": "1325"
-    },
-    {
-      "id": "eGbwcNS",
-      "name": "não sei",
-      "status": "emObra",
-      "purpose": "",
-      "ri_number": "",
-      "address": {
-        "district": "",
-        "city": "",
-        "street": "",
-        "state": "",
-        "number": 0,
-        "cep": ""
-      },
-      "cep": "40421520",
-      "street": "Avenida Porto dos Mastros",
-      "district": "Ribeira",
-      "city": "Salvador",
-      "state": "BA",
-      "number": "123456"
-    },
-    {
-      "id": "-GlorOS",
-      "name": "Condominio Porto dos Saveiros",
-      "status": "prontoMorar",
       "purpose": "residencial",
       "ri_number": "",
       "address": {
-        "district": "",
-        "city": "",
-        "street": "",
-        "state": "",
-        "number": 0,
-        "cep": ""
-      },
-      "cep": "40421520",
-      "street": "Avenida Porto dos Mastros",
-      "district": "Ribeira",
-      "city": "Salvador",
-      "state": "BA",
-      "number": "1325"
+        "district": "Ribeira",
+        "city": "Salvador",
+        "street": "Avenida Porto dos Mastros",
+        "state": "BA",
+        "number": "1325",
+        "cep": "40421-520"
+      }
     }
   ]
 }

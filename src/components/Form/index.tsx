@@ -12,11 +12,11 @@ interface MyFormValues {
   purpose: String,
   ri_number: String,
   address: {
+    street: String,
+    number: String,
     district: String,
     city: String,
-    street: String,
     state: String,
-    number: Number,
     cep: String,
 	}
 }
@@ -28,11 +28,11 @@ const initialValue : MyFormValues = {
 	purpose: "",
 	ri_number: "",
 	address: {
+		street: "",
+		number: "",
 		district: "",
 		city: "",
-		street: "",
 		state: "",
-		number: 0,
 		cep: "",
 	},
 };
@@ -60,10 +60,11 @@ export default function Formulario() {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((response) => response.json())
       .then((data) => {
-				setFieldValue('street', data.logradouro);
-				setFieldValue('district', data.bairro);
-				setFieldValue('city', data.localidade);
-				setFieldValue('state', data.uf);
+				setFieldValue('address.street', data.logradouro);
+				setFieldValue('address.district', data.bairro);
+				setFieldValue('address.city', data.localidade);
+				setFieldValue('address.state', data.uf);
+				setFieldValue('address.cep', data.cep);
       });
   }
 
@@ -77,8 +78,7 @@ export default function Formulario() {
 					initialValues={initialValue}
             render={({ values, handleSubmit, setFieldValue }) => (
 							<Form>
-								<div className="formEdicao">
-                <div>
+                <div className="containerStatus">
                   <label htmlFor="status" />
                   <Field as="Select" 
                     className="status"
@@ -89,10 +89,10 @@ export default function Formulario() {
                     <option value="emObra">Em obras</option>
                     <option value="prontoMorar">Pronto mara morar</option>
                   </Field>
-                </div>
                 <Divisor />
+                </div>
 
-                <div>
+                <div className="containerNomeEmpreenddimento">
                   <label htmlFor="name" />
                   <Field
                     type="text"
@@ -100,10 +100,10 @@ export default function Formulario() {
                     name="name"
                     placeholder=" Nome do empreendimento"
                   />
-                </div>
                 <Divisor />
+                </div>
 
-                <div>
+                <div className="containerTipoImovel">
                   <label htmlFor="purpose"></label>
                   <Field as="select"
                     className="tipoImovel"
@@ -112,80 +112,80 @@ export default function Formulario() {
                     <option value="residencial">Residencial</option>
                     <option value="empresarial">Empresarial</option>
                   </Field>
-                </div>
                 <Divisor />
+                </div>
 
-                <div>
-                  <label htmlFor="cep">
+                <div className="containerCep">
+                  <label htmlFor="address.cep">
                     <Field
                       type="text"
                       className="cepEmpreendimento"
-                      name="cep"
+                      name="address.cep"
                       placeholder=" CEP"
                       onBlur={(e) => onBlurCep(e, setFieldValue)}
                     />
                   </label>
+                  <Divisor />
                 </div>
 
-                <div className="address">
+                <div className="containerAddress">
                   <div>
-                    <label htmlFor="street">
+                    <label htmlFor="address.street">
                       <Field
                         className="endereco"
 												type="text"
-                        name="street"
+                        name="address.street"
                       />
                     </label>
                   </div>
 
                   <div>
-                    <label htmlFor="district">
+                    <label htmlFor="address.district">
                       <Field
                         className="endereco"
 												type="text"
-                        name="district"
+                        name="address.district"
                       />
                     </label>
                   </div>
 
                   <div>
-                    <label htmlFor="city">
+                    <label htmlFor="address.city">
                       <Field
                         className="endereco"
 												type="text"
-                        name="city"
+                        name="address.city"
                       />
                     </label>
                   </div>
 
                   <div>
-                    <label htmlFor="state">
+                    <label htmlFor="address.state">
                       <Field
                         className="endereco"
 												type="text"
-                        name="state"
+                        name="address.state"
                       />
                     </label>
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="number">
+                <div className="containerNumero">
+                  <label htmlFor="address.number">
                     <Field
                       type="text"
                       className="numero"
-                      name="number"
+                      name="address.number"
                     />
                   </label>
-                </div>
                 <Divisor />
+                </div>
 
                 <div>
                   <button type="submit" className="cadastar">
                     Cadastrar
                   </button>
                 </div>
-								</div>
               </Form>
             )}
           />
