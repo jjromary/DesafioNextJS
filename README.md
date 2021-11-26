@@ -5,7 +5,7 @@ Desafio técnico para vaga de Dev Front end
 - [x] Rodar na web
 - [x] Utilizar Typescript
 - [x] Listar Empreendimentos
-- [ ] Criar Empreendimento
+- [x] Criar Empreendimento
 - [ ] Editar Empreendimento
 - [ ] Deletar Empreendimento
 - [x] Styled-components para construção do layout 
