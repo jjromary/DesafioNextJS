@@ -2,7 +2,7 @@ import React, { ReactNode, useState } from "react";
 import axios from "axios";
 import Divisor from "../Divisor";
 import { Container, Content } from "./styles";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 
 interface MyFormValues {
@@ -42,10 +42,10 @@ export default function Formulario() {
   // const history = useHistory();
 
   function onSubmit(values, actions) {
-    axios.post("http://localhost:3001/enterprises", values);
-    // .then((response) => {
+    axios.post("http://localhost:3001/enterprises", values)
+    .then((response) => {
     // history.push('/');
-    //   });
+      });
   }
 
   // Função para execucar chamada a API ViaCEP fazendo validação de dados

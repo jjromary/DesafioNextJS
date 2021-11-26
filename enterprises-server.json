@@ -59,6 +59,21 @@
         "number": "1325",
         "cep": "40421-520"
       }
+    },
+    {
+      "id": "FVgYncR",
+      "name": "Condomínio Porto dos Saveiros",
+      "status": "prontoMorar",
+      "purpose": "residencial",
+      "ri_number": "",
+      "address": {
+        "street": "Avenida Porto dos Mastros",
+        "number": "1325",
+        "district": "Ribeira",
+        "city": "Salvador",
+        "state": "BA",
+        "cep": "40421-520"
+      }
     }
   ]
 }
