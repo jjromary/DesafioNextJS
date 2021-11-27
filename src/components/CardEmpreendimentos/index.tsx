@@ -25,18 +25,24 @@ export function CardEmpreendimentos() {
               <div className="nomeEmpreendimento">
                 <strong>{empreendimento.name}</strong>
 
-                <div className="icones">
+                <div className="iconeEditar">
                   <Link href={`/editar/${empreendimento.id}`}>
                     <a>
-                      <Image src={editar}width={12} height={12} alt="editar" />
+                      <Image src={editar} width={12} height={12} alt="editar" />
                     </a>
                   </Link>
+                </div>
+                <div className="iconeDeletar">
                   <Link href={`/delete/${empreendimento.id}`}>
                     <a>
-                      <Image src={deletar}width={12} height={12} alt="deletar" />
+                      <Image
+                        src={deletar}
+                        width={12}
+                        height={12}
+                        alt="deletar"
+                      />
                     </a>
                   </Link>
-                  
                 </div>
               </div>
 

@@ -35,7 +35,10 @@ export const Container = styled.div`
                 color: var(--textcolor-primary)
             }
             
-            .icones{
+            .iconeEditar{
+                margin-left: 18px;
+            }
+            .iconeDeletar{
                 margin-left: 18px;
             }               
         }
