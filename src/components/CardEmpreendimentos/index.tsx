@@ -4,6 +4,8 @@ import deletar from "../../../public/deletar.svg";
 import editar from "../../../public/editar.svg";
 import api from "../../services/api";
 import Link from "next/link";
+import Image from "next/image";
+import next from "next";
 
 export function CardEmpreendimentos() {
   const [empreendimentos, setEmpreendimentos] = useState([]);
@@ -24,21 +26,17 @@ export function CardEmpreendimentos() {
                 <strong>{empreendimento.name}</strong>
 
                 <div className="icones">
-                  <Link href={`/editar/${empreendimento.id}`} passHref>
-                    <input
-                      type="image"
-                      src={editar}
-                      width={12.68}
-                      height={12.68}
-                    />
-                    
+                  <Link href={`/editar/${empreendimento.id}`}>
+                    <a>
+                      <Image src={editar}width={12} height={12} alt="editar" />
+                    </a>
                   </Link>
-                  <input
-                    type="image"
-                    src={deletar}
-                    width={12.68}
-                    height={12.68}
-                  />
+                  <Link href={`/delete/${empreendimento.id}`}>
+                    <a>
+                      <Image src={deletar}width={12} height={12} alt="deletar" />
+                    </a>
+                  </Link>
+                  
                 </div>
               </div>
 

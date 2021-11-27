@@ -35,7 +35,7 @@ export const Container = styled.div`
                 color: var(--textcolor-primary)
             }
             
-            input{
+            .icones{
                 margin-left: 18px;
             }               
         }

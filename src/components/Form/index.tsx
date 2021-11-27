@@ -1,8 +1,7 @@
-import React, { ReactNode, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Divisor from "../Divisor";
 import { Container, Content } from "./styles";
-// import { useHistory } from "react-router-dom";
 import { Formik, Field, Form } from "formik";
 
 interface MyFormValues {
@@ -37,27 +36,41 @@ const initialValue : MyFormValues = {
 	},
 };
 
-export default function Formulario() {
-  const [values, setValues] = useState(initialValue);
-  // const history = useHistory();
+export default function Formulario({id}){
+  const [valuesForm, setValuesForm] = useState( initialValue);
+  const botao = id ? 'Editar' : 'Cadastrar'
 
-  function onSubmit(values, actions) {
-    axios.post("http://localhost:3001/enterprises", values)
+  useEffect(() => {
+    if(id){
+      axios.get(`http://localhost:3001/enterprises/${id}`)
+      .then((response) => {
+        setValuesForm(response.data)        
+      })
+    }
+  },[]);
+
+
+  function onSubmit(values) {
+    const method = id ? 'put' : 'post';
+    const url = id
+      ? `http://localhost:5000/promotions/${id}`
+      : 'http://localhost:5000/promotions'
+
+    axios[method](url, values)
     .then((response) => {
-    // history.push('/');
       });
   }
 
   // Função para execucar chamada a API ViaCEP fazendo validação de dados
-  function onBlurCep(e, setFieldValue) {
+  function onBlurCep(e, setFieldValue) {    
     const { value } = e.target;
     const cep = value?.replace(/[^0-9]/g, "");
 
     if (cep?.lenght == !8) {
       return;
-    }
+    }  
 
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    fetch(`https://viacep.com.br/ws/${cep}/json`)
       .then((response) => response.json())
       .then((data) => {
 				setFieldValue('address.street', data.logradouro);
@@ -76,7 +89,7 @@ export default function Formulario() {
           <Formik
 					onSubmit={onSubmit}
 					initialValues={initialValue}
-            render={({ values, handleSubmit, setFieldValue }) => (
+            render={({ setFieldValue }) => (
 							<Form>
                 <div className="containerStatus">
                   <label htmlFor="status" />
@@ -183,7 +196,7 @@ export default function Formulario() {
 
                 <div>
                   <button type="submit" className="cadastar">
-                    Cadastrar
+                    {botao}
                   </button>
                 </div>
               </Form>
