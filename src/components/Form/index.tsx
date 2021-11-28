@@ -96,6 +96,7 @@ export default function Formulario({id}){
                   <Field as="Select" 
                     className="status"
                     name="status"
+                    
                   >
                     <option value="breveLancamento">Breve lançamento</option>
                     <option value="lancamento">Lançamento</option>
